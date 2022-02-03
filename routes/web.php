@@ -18,7 +18,7 @@ use App\Http\Controllers\MemberController;
     return view('welcome');
 });*/
 
-Route::get('/list', [MemberController::class,'show']);
+Route::get('/', [MemberController::class,'show']);
 
-Route::get('/', [MainController::class, 'index'])->name('index');
+Route::get('/main', [MainController::class, 'index'])->name('index');
 Route::get('/getStates/{id}', [MainController::class, 'getStates'])->name('getStates');
