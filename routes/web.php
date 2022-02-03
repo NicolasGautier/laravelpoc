@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\MainController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\MemberController;
 /*
@@ -13,8 +14,11 @@ use App\Http\Controllers\MemberController;
 |
 */
 
-Route::get('/', function () {
+/*Route::get('/', function () {
     return view('welcome');
-});
+});*/
 
-Route::get('list', [MemberController::class,'show']);
+Route::get('/list', [MemberController::class,'show']);
+
+Route::get('/', [MainController::class, 'index'])->name('index');
+Route::get('/getStates/{id}', [MainController::class, 'getStates'])->name('getStates');
