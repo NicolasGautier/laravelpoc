@@ -55,7 +55,7 @@
                         <td>Edinburgh</td>
                         <td>61</td>
                         <td>2011/04/25</td>
-                        <td>$320,800</td>
+                        <td>$320,800 <span data-href="/member" id="export" class="btn btn-success btn-sm" onclick="exportMember(event.target);">Export</span></td>
                     </tr>
                     <tr>
                         <td>Garrett Winters</td>
@@ -63,7 +63,7 @@
                         <td>Tokyo</td>
                         <td>63</td>
                         <td>2011/07/25</td>
-                        <td>$170,750</td>
+                        <td>$170,750<span data-href="/member" id="export" class="btn btn-success btn-sm" onclick="exportMember(event.target);">Export</span></td>
                     </tr>
                     <tr>
                         <td>Ashton Cox</td>
@@ -521,6 +521,13 @@
         </div>
     </div>
 </div>
+
+<script>
+    function exportMember(_this) {
+        let _url = $(_this).data('href');
+        window.location.href = _url;
+    }
+</script>
 @endsection
 @section('scripts')
 

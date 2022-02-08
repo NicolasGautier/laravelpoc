@@ -19,6 +19,6 @@ use App\Http\Controllers\MemberController;
 });*/
 
 Route::get('/', [MemberController::class,'show']);
-
+Route::get('/member', 'MemberController@exportCsv');
 Route::get('/main', [MainController::class, 'index'])->name('index');
 Route::get('/getStates/{id}', [MainController::class, 'getStates'])->name('getStates');
