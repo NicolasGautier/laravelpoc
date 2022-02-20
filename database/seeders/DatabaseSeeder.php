@@ -17,5 +17,10 @@ class DatabaseSeeder extends Seeder
         for ($i = 1; $i < 10; $i++) {
             DB::table('members')->insert(['name' => 'member ' . $i, 'email' => 'name'.rand(1, 20), 'adress' => 'adress'.$i]);
         }
+
+        DB::table('users')->insert(
+            ['name' => 'nicolas',
+                'email' => 'nicolas@devnantes.fr',
+                'password' => 'password']);
     }
 }
